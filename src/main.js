@@ -15,6 +15,10 @@ import {
   VToolbar,
   transitions
 } from 'vuetify'
+
+import VideoDetail from '@/components/VideoDetail'
+import YoutubeEmbed from '@/components/YoutubeEmbed'
+
 import '../node_modules/vuetify/src/stylus/app.styl'
 
 Vue.use(Vuetify, {
@@ -46,6 +50,10 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router,
-  components: { App },
+  components: {
+    App,
+    VideoDetail,
+    YoutubeEmbed
+  },
   template: '<App/>'
 })

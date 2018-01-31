@@ -2,8 +2,12 @@
   <v-container fluid>
     <v-layout row wrap>
       <v-flex d-flex xs12 md8>
-        <youtube-embed></youtube-embed>
         <v-content>
+          <v-layout row wrap>
+            <v-flex d-flex xs12>
+              <youtube-embed></youtube-embed>
+            </v-flex>
+          </v-layout>
           <v-layout row wrap>
             <v-flex d-flex xs12>
               Tag Component Here
@@ -40,8 +44,13 @@
 </template>
 
 <script>
+import YoutubeEmbed from '@/components/YoutubeEmbed'
+
 export default {
-    data () {
+  components: [
+    YoutubeEmbed
+  ],
+  data () {
     return {
       videoID: 'nxkM3I2MBcs'
     }

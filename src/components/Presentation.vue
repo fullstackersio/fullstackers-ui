@@ -47,15 +47,15 @@
 import YoutubeEmbed from '@/components/YoutubeEmbed'
 
 export default {
-  components: [
+  components: {
     YoutubeEmbed
-  ],
+  },
   data () {
     return {
       videoID: 'nxkM3I2MBcs'
     }
   },
-  name: 'VideoDetail'
+  name: 'Presentation'
 }
 </script>
 

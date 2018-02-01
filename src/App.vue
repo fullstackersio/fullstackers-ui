@@ -6,7 +6,7 @@
       dark
       app
     >
-      <v-btn flat>Videos</v-btn>
+      <v-btn flat>Presentations</v-btn>
       <v-btn flat>Presentation Tips</v-btn>
       <v-btn flat>Slack</v-btn>
       <v-btn flat>Trello</v-btn>

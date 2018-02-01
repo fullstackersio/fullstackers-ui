@@ -1,5 +1,5 @@
 <template>
-  <iframe style="height: 550px;" src="https://www.youtube.com/embed/nxkM3I2MBcs?start=0" allowfullscreen=""></iframe>
+  <iframe src="https://www.youtube.com/embed/nxkM3I2MBcs?start=0" allowfullscreen=""></iframe>
 </template>
 
 <script>
@@ -13,6 +13,8 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped>
+iframe {
+  height: 600px;
+}
 </style>

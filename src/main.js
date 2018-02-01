@@ -16,7 +16,7 @@ import {
   transitions
 } from 'vuetify'
 
-import VideoDetail from '@/components/VideoDetail'
+import Presentation from '@/components/Presentation'
 import YoutubeEmbed from '@/components/YoutubeEmbed'
 
 import '../node_modules/vuetify/src/stylus/app.styl'
@@ -52,7 +52,7 @@ new Vue({
   router,
   components: {
     App,
-    VideoDetail,
+    Presentation,
     YoutubeEmbed
   },
   template: '<App/>'

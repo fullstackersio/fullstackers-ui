@@ -35,7 +35,8 @@
     ],
     computed: {
       thumb_url: function () {
-        return 'http://i3.ytimg.com/vi/' + this.presentation.youtube_id + '/hqdefault.jpg'
+        return 'http://i3.ytimg.com/vi/' + this.presentation.youtube_id + '/0.jpg'
+        // return 'http://i3.ytimg.com/vi/' + this.presentation.youtube_id + '/hqdefault.jpg'
         // return 'http://i3.ytimg.com/vi/' + this.presentation.youtube_id + '/maxresdefault.jpg'
       }
     }

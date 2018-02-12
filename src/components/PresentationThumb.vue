@@ -1,14 +1,38 @@
 <template>
-  <router-link :to="{ path: '/presentations', params: { id: presentation.id }}">
-    <img class='thumb' :src='thumb_url' alt=''>
-    <h3>{{presentation.title}} by {{presentation.speakers[0].speaker}}</h3>
-  </router-link>
+  <v-card class="thumbnail">
+      <router-link :to="{ name: 'Presentation', params: { id: presentation.id }}">
+        <v-card-media class='white--text' :height="height" :src='thumb_url' alt=''>
+        </v-card-media>
+      </router-link>
+    <v-card-title>
+      <div>
+        <h3 class="title">{{presentation.title}}</h3>
+        Presented by {{presentation.speakers[0].speaker}} at <a :href="presentation.group.url">{{presentation.group.name}}</a>
+      </div>
+    </v-card-title>
+    <v-card-actions>
+      <v-btn flat color="blue" :to="{ name: 'Presentation', params: { id: presentation.id }}">Watch</v-btn>
+      <v-btn flat>Share</v-btn>
+      <v-spacer></v-spacer>
+      <v-btn icon @click.native="show = !show">
+        <v-icon>{{ show ? 'keyboard_arrow_down' : 'keyboard_arrow_up' }}</v-icon>
+      </v-btn>
+    </v-card-actions>
+    <v-slide-y-transition>
+      <v-card-text v-show="show">
+        Presentation description here
+      </v-card-text>
+    </v-slide-y-transition>
+  </v-card>
 </template>
 
 <script>
   export default {
     name: 'presentation-thumb',
-    props: ['presentation'],
+    props: [
+      'presentation',
+      'height'
+    ],
     computed: {
       thumb_url: function () {
         return 'http://i3.ytimg.com/vi/' + this.presentation.youtube_id + '/maxresdefault.jpg'
@@ -18,20 +42,21 @@
 </script>
 
 <style scoped>
-  .thumb {
-    max-width: 60vw;
+  .thumbnail {
+    margin-bottom: 2em;
+  }
+
+  .title {
+    font-weight: bold;
+    font-size: 1.2em;
   }
 
   a {
-    text-decoration: none;
-  }
-
-  a h3 {
     color: black;
     text-decoration: none;
   }
 
-  a h3:hover {
+  a:hover {
     color: blue;
     text-decoration: underline;
   }

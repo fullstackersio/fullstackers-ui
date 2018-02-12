@@ -13,11 +13,6 @@
               Tag Component Here
             </v-flex>
           </v-layout>
-          <v-layout row wrap>
-            <v-flex d-flex xs12>
-              Tag Component Here
-            </v-flex>
-          </v-layout>
         </v-content>
       </v-flex>
       <v-flex d-flex xs12 md4>
@@ -52,12 +47,9 @@ export default {
   components: {
     YoutubeEmbed
   },
-  props: [
-    'id'
-  ],
   computed: {
-    property: function () {
-      return this.sharedState.presentations[0]
+    presentation: function () {
+      return this.sharedState.findPresentation(this.$route.params.id)[0]
     }
   },
   data () {

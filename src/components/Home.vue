@@ -12,13 +12,13 @@
     </v-layout>
     <v-layout row wrap>
       <v-flex d-flex xs12 md8>
-        <v-container>
-          <presentation-thumb v-for="presentation in sharedState.presentations" :key="presentation.id" :presentation="presentation"></presentation-thumb>
-        </v-container>
-      </v-flex>
-      <v-flex xs12 md4>
         <v-content>
-          akldsfjaklsdf
+          <presentation-thumb v-for="presentation in sharedState.presentations" :key="presentation.id" :presentation="presentation" :height="'500px'"></presentation-thumb>
+        </v-content>
+      </v-flex>
+      <v-flex d-flex xs12 md4>
+        <v-content>
+          <h2>Upcoming Events</h2>
         </v-content>
       </v-flex>
     </v-layout>
@@ -31,8 +31,10 @@ import sharedState from '../SharedState'
 // import axios from 'axios'
 
 export default {
-  components: {PresentationThumb},
   'name': 'home',
+  components: {
+    PresentationThumb
+  },
   data () {
     return {
       sharedState

@@ -14,6 +14,7 @@ import {
   VGrid,
   VToolbar,
   VForm,
+  VCard,
   transitions
 } from 'vuetify'
 
@@ -35,6 +36,7 @@ Vue.use(Vuetify, {
     VGrid,
     VToolbar,
     VForm,
+    VCard,
     transitions
   },
   theme: {

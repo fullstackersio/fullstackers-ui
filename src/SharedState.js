@@ -1,10 +1,11 @@
 export default {
-  'presentations': [{
+  presentations: [{
     'id': 5,
     'type': 'video',
     'group': {
       'groupid': 8,
-      'name': 'jSTL'
+      'name': 'jSTL',
+      'url': ''
     },
     'url': 'https://www.youtube.com/embed/nxkM3I2MBcs?start=0',
     'youtube_id': 'nxkM3I2MBcs',
@@ -31,45 +32,46 @@ export default {
     'flagged_ind': 0,
     'delete_ind': 0
   },
-  {
-    'id': 3,
-    'type': 'video',
-    'group': {
-      'groupid': 9,
-      'name': 'Stl Full Stack'
-    },
-    'url': 'https://www.youtube.com/embed/gsCRrbRPVj4?start=0',
-    'youtube_id': 'gsCRrbRPVj4',
-    'title': 'Getting Started with Vagrant',
-    'date_created': '2017-06-01',
-    'date_uploaded': '2018-01-22',
-    'user': {
-      'userid': 77,
-      'name': 'user77'
-    },
-    'tags': [{
-      'tagid': 9,
-      'tag': 'Vagrant'
-    }, {
-      'tagid': 88,
-      'tag': 'Provisioning'
-    }],
-    'speakers': [{
-      'speakerid': 77,
-      'speaker': 'Matt Thomas',
-      'email': 'user77@aol.com',
-      'gitub': 'github.com/user77'
-    }],
-    'approved_ind': 1,
-    'flagged_ind': 0,
-    'delete_ind': 0
-  },
+  // {
+  //   'id': 3,
+  //   'type': 'video',
+  //   'group': {
+  //     'groupid': 9,
+  //     'name': 'Stl Full Stack'
+  //   },
+  //   'url': 'https://www.youtube.com/embed/gsCRrbRPVj4?start=0',
+  //   'youtube_id': 'gsCRrbRPVj4',
+  //   'title': 'Getting Started with Vagrant',
+  //   'date_created': '2017-06-01',
+  //   'date_uploaded': '2018-01-22',
+  //   'user': {
+  //     'userid': 77,
+  //     'name': 'user77'
+  //   },
+  //   'tags': [{
+  //     'tagid': 9,
+  //     'tag': 'Vagrant'
+  //   }, {
+  //     'tagid': 88,
+  //     'tag': 'Provisioning'
+  //   }],
+  //   'speakers': [{
+  //     'speakerid': 77,
+  //     'speaker': 'Matt Thomas',
+  //     'email': 'user77@aol.com',
+  //     'gitub': 'github.com/user77'
+  //   }],
+  //   'approved_ind': 1,
+  //   'flagged_ind': 0,
+  //   'delete_ind': 0
+  // },
   {
     'id': 4,
     'type': 'video',
     'group': {
       'groupid': 9,
-      'name': 'Stl Full Stack'
+      'name': 'Stl Full Stack',
+      'url': 'https://www.meetup.com/SaintLouis_FullStack_WebDevelopment'
     },
     'url': 'https://www.youtube.com/embed/gxBEFfmkZ5w?start=0',
     'youtube_id': 'gxBEFfmkZ5w',
@@ -97,7 +99,7 @@ export default {
     'flagged_ind': 0,
     'delete_ind': 0
   }],
-  'resources': [{
+  resources: [{
     'id': 55,
     'type': 'page',
     'paid_ind': 0,
@@ -140,5 +142,15 @@ export default {
     'approved_ind': 0,
     'flagged_ind': 0,
     'delete_ind': 0
-  }]
+  }],
+
+  findPresentation: function (id) {
+    console.log(id)
+    return this.presentations.filter(function (presentation) {
+      if (presentation.id === parseInt(id)) {
+        console.log('found')
+        return presentation
+      }
+    })
+  }
 }

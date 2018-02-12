@@ -21,7 +21,7 @@
         <!--style="max-width: 500px; min-width: 128px"-->
       <!--&gt;</v-text-field>-->
     </v-toolbar>
-    <v-container fluid grid-list-md>
+    <v-container fluid grid-list-md app>
       <v-layout row wrap>
         <v-flex xs12>
           <img class="logo" src="@/assets/img/logo.png" alt="FullStackers.io">
@@ -30,7 +30,7 @@
       <router-view/>
     </v-container>
     <v-footer app>
-      <span>&copy; 2018</span>
+      <span>FullStackers.io &copy; 2018</span>
     </v-footer>
   </v-app>
 </template>

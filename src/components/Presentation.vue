@@ -5,7 +5,7 @@
         <v-content>
           <v-layout row wrap>
             <v-flex d-flex xs12>
-              <youtube-embed></youtube-embed>
+              <youtube-embed :videoId="presentation.youtube_id"></youtube-embed>
             </v-flex>
           </v-layout>
           <v-layout row wrap>
@@ -45,17 +45,27 @@
 
 <script>
 import YoutubeEmbed from '@/components/YoutubeEmbed'
+import sharedState from '../SharedState'
 
 export default {
+  name: 'Presentation',
   components: {
     YoutubeEmbed
   },
-  data () {
-    return {
-      videoID: 'nxkM3I2MBcs'
+  props: [
+    'id'
+  ],
+  computed: {
+    property: function () {
+      return this.sharedState.presentations[0]
     }
   },
-  name: 'Presentation'
+  data () {
+    return {
+      sharedState
+    }
+  }
+
 }
 </script>
 

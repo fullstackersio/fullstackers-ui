@@ -13,10 +13,13 @@ import {
   VIcon,
   VGrid,
   VToolbar,
+  VForm,
   transitions
 } from 'vuetify'
 
+import Home from '@/components/Home'
 import Presentation from '@/components/Presentation'
+import PresentationThumb from '@/components/PresentationThumb'
 import YoutubeEmbed from '@/components/YoutubeEmbed'
 
 import '../node_modules/vuetify/src/stylus/app.styl'
@@ -31,6 +34,7 @@ Vue.use(Vuetify, {
     VIcon,
     VGrid,
     VToolbar,
+    VForm,
     transitions
   },
   theme: {
@@ -52,7 +56,9 @@ new Vue({
   router,
   components: {
     App,
+    Home,
     Presentation,
+    PresentationThumb,
     YoutubeEmbed
   },
   template: '<App/>'

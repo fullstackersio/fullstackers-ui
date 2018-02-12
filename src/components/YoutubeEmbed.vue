@@ -1,15 +1,19 @@
 <template>
-  <iframe src="https://www.youtube.com/embed/nxkM3I2MBcs?start=0" allowfullscreen=""></iframe>
+  <iframe :src="youtubeEmbedUrl" allowfullscreen=""></iframe>
 </template>
 
 <script>
 export default {
-  data () {
-    return {
-      videoID: 'nxkM3I2MBcs'
+  // TOOO: add http call to retrieve the video information from the API
+  name: 'YoutubeEmbed',
+  props: [
+    'videoId'
+  ],
+  computed: {
+    youtubeEmbedUrl: function () {
+      return 'https://www.youtube.com/embed/' + this.videoId + '?start=0'
     }
-  },
-  name: 'YoutubeEmbed'
+  }
 }
 </script>
 

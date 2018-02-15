@@ -33,6 +33,11 @@
       'presentation',
       'height'
     ],
+    data () {
+      return {
+        'show': false
+      }
+    },
     computed: {
       thumb_url: function () {
         return 'http://i3.ytimg.com/vi/' + this.presentation.youtube_id + '/0.jpg'

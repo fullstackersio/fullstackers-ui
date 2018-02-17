@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid grid-list-md>
+  <v-container fluid>
     <v-layout row wrap>
       <v-flex d-flex xs12 md9>
         <presentation-thumb
@@ -8,9 +8,7 @@
           :presentation="presentation"
           :height="'250px'"
           d-flex
-          xs12
-          md6
-          lg4
+          wrap
         ></presentation-thumb>
       </v-flex>
       <v-flex d-flex xs12 md3>

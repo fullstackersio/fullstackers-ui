@@ -13,11 +13,21 @@ import {
   VIcon,
   VGrid,
   VToolbar,
+  VForm,
+  VCard,
+  VTextField,
   transitions
 } from 'vuetify'
 
+import 'vue-awesome/icons'
+import Icon from 'vue-awesome/components/Icon'
+
+import Home from '@/components/Home'
 import Presentation from '@/components/Presentation'
+import PresentationThumb from '@/components/PresentationThumb'
 import YoutubeEmbed from '@/components/YoutubeEmbed'
+import Tips from '@/components/Tips'
+import Meetings from '@/components/Meetings'
 
 import '../node_modules/vuetify/src/stylus/app.styl'
 
@@ -31,6 +41,9 @@ Vue.use(Vuetify, {
     VIcon,
     VGrid,
     VToolbar,
+    VForm,
+    VTextField,
+    VCard,
     transitions
   },
   theme: {
@@ -44,6 +57,8 @@ Vue.use(Vuetify, {
   }
 })
 
+Vue.component('icon', Icon)
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
@@ -52,8 +67,12 @@ new Vue({
   router,
   components: {
     App,
+    Home,
     Presentation,
-    YoutubeEmbed
+    PresentationThumb,
+    YoutubeEmbed,
+    Tips,
+    Meetings
   },
   template: '<App/>'
 })

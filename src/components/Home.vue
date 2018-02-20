@@ -3,13 +3,13 @@
     <v-layout row wrap>
       <v-flex d-flex xs12 md12>
         <v-content>
-          <h3>
+          <div class="about pa-3">
             Learning how to create full-stack, scalable internet applications, from the database all the way to
             front-end user interfaces.
-          </h3>
+          </div>
         </v-content>
-      </v-flex>
-    </v-layout>
+          </v-flex>
+        </v-layout>
     <v-layout row wrap>
       <v-flex d-flex xs12 md8>
         <v-content>
@@ -28,7 +28,7 @@
 <script>
 import PresentationThumb from './PresentationThumb'
 import sharedState from '../SharedState'
-// import axios from 'axios'
+import axios from 'axios'
 
 export default {
   'name': 'home',
@@ -39,10 +39,27 @@ export default {
     return {
       sharedState
     }
+  },
+  async created () {
+    const response = await axios.get('http://api.fullstackers.io/v0/presentations')
+    console.log(response)
+    // const urlBase = 'https://picsum.photos/500/350?image'
+    // this.images = response.data
+    //   .map(imageData => {
+    //     return {
+    //       title: imageData.filename,
+    //       artist: imageData.author,
+    //       url: `${urlBase}=${imageData.id}`,
+    //       caption: ''
+    //     }
+    //   })
   }
 }
 </script>
 
 <style scoped>
-
+  .about {
+    /*padding: 1em;*/
+    font-size: 1.75em;
+  }
 </style>

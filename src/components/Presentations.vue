@@ -3,7 +3,7 @@
     <v-layout row wrap>
       <v-flex d-flex xs12 md9>
         <presentation-thumb
-          v-for="presentation in sharedState.presentations"
+          v-for="presentation in presentations"
           :key="presentation.id"
           :presentation="presentation"
           :height="'250px'"
@@ -26,6 +26,7 @@
 <script>
 import sharedState from '../SharedState'
 import PresentationThumb from './PresentationThumb'
+import axios from 'axios'
 
 export default {
   'name': 'presentations',
@@ -34,8 +35,13 @@ export default {
   },
   data () {
     return {
+      presentations: [],
       sharedState
     }
+  },
+  async created () {
+    const response = await axios.get('http://api.fullstackers.io/v0/presentations')
+    this.presentations = response.data.presentations
   }
 }
 </script>

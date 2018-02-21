@@ -5,7 +5,7 @@
         <v-content>
           <v-layout row wrap>
             <v-flex d-flex xs12>
-              <youtube-embed :videoId="presentation.youtube_id"></youtube-embed>
+              <youtube-embed :videoId="presentation.url"></youtube-embed>
             </v-flex>
           </v-layout>
           <v-layout row wrap>
@@ -41,23 +41,23 @@
 <script>
 import YoutubeEmbed from '@/components/YoutubeEmbed'
 import sharedState from '../SharedState'
+import axios from 'axios'
 
 export default {
   name: 'Presentation',
   components: {
     YoutubeEmbed
   },
-  computed: {
-    presentation: function () {
-      return this.sharedState.findPresentation(this.$route.params.id)[0]
-    }
-  },
   data () {
     return {
+      presentation: {},
       sharedState
     }
+  },
+  async created () {
+    const response = await axios.get('http://api.fullstackers.io/v0/presentations/' + this.$route.params.id)
+    this.presentation = response.data
   }
-
 }
 </script>
 

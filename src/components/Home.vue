@@ -13,7 +13,7 @@
     <v-layout row wrap>
       <v-flex d-flex xs12 md8>
         <v-content>
-          <presentation-thumb v-for="presentation in sharedState.presentations" :key="presentation.id" :presentation="presentation" :height="'500px'"></presentation-thumb>
+          <presentation-thumb v-for="presentation in presentations" :key="presentation.id" :presentation="presentation" :height="'500px'"></presentation-thumb>
         </v-content>
       </v-flex>
       <v-flex d-flex xs12 md4>
@@ -37,22 +37,13 @@ export default {
   },
   data () {
     return {
+      presentations: [],
       sharedState
     }
   },
   async created () {
     const response = await axios.get('http://api.fullstackers.io/v0/presentations')
-    console.log(response)
-    // const urlBase = 'https://picsum.photos/500/350?image'
-    // this.images = response.data
-    //   .map(imageData => {
-    //     return {
-    //       title: imageData.filename,
-    //       artist: imageData.author,
-    //       url: `${urlBase}=${imageData.id}`,
-    //       caption: ''
-    //     }
-    //   })
+    this.presentations = response.data.presentations.splice(0, 4)
   }
 }
 </script>

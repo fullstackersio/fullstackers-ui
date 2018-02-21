@@ -7,7 +7,7 @@
     <v-card-title>
       <div>
         <h3 class="title">{{presentation.title}}</h3>
-        Presented by {{presentation.speakers[0].speaker}} at <a :href="presentation.group.url">{{presentation.group.name}}</a>
+        Presented by {{presentation.speakers[0].speaker}} at {{presentation.group.name}}
       </div>
     </v-card-title>
     <v-card-actions>
@@ -20,7 +20,7 @@
     </v-card-actions>
     <v-slide-y-transition>
       <v-card-text v-show="show">
-        Presentation description here
+        {{presentation.summary}}
       </v-card-text>
     </v-slide-y-transition>
   </v-card>
@@ -40,7 +40,7 @@
     },
     computed: {
       thumb_url: function () {
-        return 'http://i3.ytimg.com/vi/' + this.presentation.youtube_id + '/0.jpg'
+        return 'http://i3.ytimg.com/vi/' + this.presentation.url + '/0.jpg'
         // return 'http://i3.ytimg.com/vi/' + this.presentation.youtube_id + '/hqdefault.jpg'
         // return 'http://i3.ytimg.com/vi/' + this.presentation.youtube_id + '/maxresdefault.jpg'
       }

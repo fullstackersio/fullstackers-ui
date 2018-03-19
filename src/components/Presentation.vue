@@ -55,7 +55,7 @@ export default {
     }
   },
   async created () {
-    const response = await axios.get('http://apis.fullstackers.io/v0/presentations/' + this.$route.params.id)
+    const response = await axios.get('http://api.fullstackers.io/v0/presentations/' + this.$route.params.id)
     this.presentation = response.data
   }
 }

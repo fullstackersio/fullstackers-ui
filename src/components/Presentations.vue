@@ -40,7 +40,7 @@ export default {
     }
   },
   async created () {
-    const response = await axios.get('http://api.fullstackers.io/v0/presentations')
+    const response = await axios.get('https://api.fullstackers.io/v0/presentations')
     this.presentations = response.data.presentations
   }
 }

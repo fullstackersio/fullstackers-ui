@@ -1,0 +1,43 @@
+<div>
+  <img class="logo" src="assets/img/logo.png" alt="Fullstackers.io">
+</div>
+
+<mat-toolbar>
+  <div class="menu-left">
+      <button mat-button>
+          <mat-icon>menu</mat-icon>
+        </button>
+        <button mat-button>
+          <mat-icon>home</mat-icon>
+        </button>
+        <button mat-button>Presentations</button>
+        <button mat-button>Presentation Tips</button>
+        <button mat-button>Meetings</button>
+  </div>
+
+  <div class="menu-right">
+      <button mat-button><fa name="meetup" size="lg"></fa></button>
+      <button mat-button><fa name="slack" size="lg"></fa></button>
+      <button mat-button><fa name="trello" size="lg"></fa></button>
+      <button mat-button><mat-icon>search</mat-icon></button>
+  </div>
+  
+</mat-toolbar>
+
+<div>
+  <p>Learning how to create full-stack, scalable internet applications, from the database all the way to front-end user interfaces.</p>
+</div>
+
+<div>
+  <div class="presentation-wrapper">
+    <h2>Presentations</h2>
+    
+    <fsio-presentations></fsio-presentations>
+    
+  </div>
+  <div class="upcoming-events-wrapper">
+    <h2>Upcoming Events</h2>
+  </div>
+</div>
+
+<router-outlet></router-outlet>

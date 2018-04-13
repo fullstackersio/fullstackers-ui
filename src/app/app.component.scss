@@ -15,10 +15,28 @@
 
 .presentation-wrapper {
     float: left;
-    width: 65%;
+    width: 50%;
+    
 }
 
 .upcoming-events-wrapper {
     float: right;
-    width: 32%;
+    width: 50%;
+}
+
+ p {
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 50px;
+    font-family: 'Fredoka One', cursive;
+}
+
+.left-title {
+    margin-left: 150px;
+    font-family: 'Fredoka One', cursive;
+}
+
+.right-title {
+    text-align: center;
+    font-family: 'Fredoka One', cursive;
 }

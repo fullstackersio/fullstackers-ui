@@ -15,10 +15,28 @@
 
 .presentation-wrapper {
     float: left;
-    width: 65%;
+    width: 50%;
+    
 }
 
 .upcoming-events-wrapper {
     float: right;
-    width: 32%;
+    width: 50%;
 }
+
+ p {
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 50px;
+   
+}
+
+.left-title {
+    text-align: left;
+  
+}
+
+.right-title {
+    text-align: center;
+}
+

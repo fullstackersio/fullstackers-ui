@@ -1,0 +1,306 @@
+{
+  "presentations": [
+    {
+      "id": 1,
+      "type": "video",
+      "url": "ihEugzMFDek",
+      "title": "AWS Lambda",
+      "date_created": "2017-09-13",
+      "date_uploaded": "2018-02-14T02:29:45.057243",
+      "summary": "Summary...",
+      "approved_ind": 1,
+      "flagged_ind": 0,
+      "delete_ind": 0,
+      "group": {
+        "groupid": 1,
+        "name": "Saint Louis Full Stack Web Development Group"
+      },
+      "user": {
+        "userid": 4,
+        "name": "just_jones"
+      },
+      "speakers": [
+        {
+          "speakerid": 5,
+          "speaker": "BenJammin",
+          "contact_info": {
+            "email": "ben99@gmail.com"
+          }
+        }
+      ],
+      "tags": [
+        {
+          "tagid": 8,
+          "tag": "Serverless"
+        },
+        {
+          "tagid": 9,
+          "tag": "AWS"
+        },
+        {
+          "tagid": 10,
+          "tag": "React"
+        },
+        {
+          "tagid": 11,
+          "tag": "Lambda"
+        },
+        {
+          "tagid": 12,
+          "tag": "API Gateway"
+        },
+        {
+          "tagid": 13,
+          "tag": "Cloud"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "type": "video",
+      "url": "nxkM3I2MBcs",
+      "title": "First Steps with: Docker",
+      "date_created": "2017-10-11",
+      "date_uploaded": "2018-02-14T02:29:45.057243",
+      "summary": "Summary...",
+      "approved_ind": 1,
+      "flagged_ind": 0,
+      "delete_ind": 0,
+      "group": {
+        "groupid": 1,
+        "name": "Saint Louis Full Stack Web Development Group"
+      },
+      "user": {
+        "userid": 4,
+        "name": "just_jones"
+      },
+      "speakers": [
+        {
+          "speakerid": 3,
+          "speaker": "marky_mark",
+          "contact_info": {
+            "linkedin": "linkedin.com/marky_mark_professional"
+          }
+        },
+        {
+          "speakerid": 4,
+          "speaker": "just_jones",
+          "contact_info": {
+            "email": "bryanj@yahoo.com"
+          }
+        }
+      ],
+      "tags": [
+        {
+          "tagid": 1,
+          "tag": "Docker"
+        },
+        {
+          "tagid": 2,
+          "tag": "Containers"
+        },
+        {
+          "tagid": 3,
+          "tag": "Continuous Deployment"
+        },
+        {
+          "tagid": 14,
+          "tag": "Configuration Management"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "type": "video",
+      "url": "gsCRrbRPVj4",
+      "title": "Getting Started with Vagrant",
+      "date_created": "2017-11-08",
+      "date_uploaded": "2018-02-14T02:29:45.057243",
+      "summary": "Summary...",
+      "approved_ind": 1,
+      "flagged_ind": 0,
+      "delete_ind": 0,
+      "group": {
+        "groupid": 1,
+        "name": "Saint Louis Full Stack Web Development Group"
+      },
+      "user": {
+        "userid": 4,
+        "name": "just_jones"
+      },
+      "speakers": [
+        {
+          "speakerid": 1,
+          "speaker": "mr_matt",
+          "contact_info": {
+            "email": "matt@gmail.com",
+            "github": "github.com/matt",
+            "linkedin": "linkedin.com/matt"
+          }
+        }
+      ],
+      "tags": [
+        {
+          "tagid": 15,
+          "tag": "Vagrant"
+        },
+        {
+          "tagid": 16,
+          "tag": "VMs"
+        },
+        {
+          "tagid": 17,
+          "tag": "Virtual Machines"
+        },
+        {
+          "tagid": 18,
+          "tag": "Virtualization"
+        },
+        {
+          "tagid": 19,
+          "tag": "Infrastructure as Code"
+        },
+        {
+          "tagid": 20,
+          "tag": "IaaS"
+        },
+        {
+          "tagid": 30,
+          "tag": "Provisioning"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "type": "video",
+      "url": "gxBEFfmkZ5w",
+      "title": "Amazon Web Services - VPC and CloudFormation",
+      "date_created": "2018-01-10",
+      "date_uploaded": "2018-02-14T02:29:45.057243",
+      "summary": "Summary...",
+      "approved_ind": 1,
+      "flagged_ind": 0,
+      "delete_ind": 0,
+      "group": {
+        "groupid": 1,
+        "name": "Saint Louis Full Stack Web Development Group"
+      },
+      "user": {
+        "userid": 4,
+        "name": "just_jones"
+      },
+      "speakers": [
+        {
+          "speakerid": 4,
+          "speaker": "just_jones",
+          "contact_info": {
+            "email": "bryanj@yahoo.com"
+          }
+        }
+      ],
+      "tags": [
+        {
+          "tagid": 9,
+          "tag": "AWS"
+        },
+        {
+          "tagid": 13,
+          "tag": "Cloud"
+        },
+        {
+          "tagid": 19,
+          "tag": "Infrastructure as Code"
+        },
+        {
+          "tagid": 20,
+          "tag": "IaaS"
+        },
+        {
+          "tagid": 21,
+          "tag": "CloudFormation"
+        },
+        {
+          "tagid": 22,
+          "tag": "Virtual Private Cloud"
+        },
+        {
+          "tagid": 23,
+          "tag": "VPC"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "type": "video",
+      "url": "nxkM3I2MBcs",
+      "title": "jSTL - Vue Ecosystem",
+      "date_created": "2018-01-24",
+      "date_uploaded": "2018-02-14T02:29:45.057243",
+      "summary": "Summary...",
+      "approved_ind": 1,
+      "flagged_ind": 0,
+      "delete_ind": 0,
+      "group": {
+        "groupid": 2,
+        "name": "jSTL"
+      },
+      "user": {
+        "userid": 4,
+        "name": "just_jones"
+      },
+      "speakers": [
+        {
+          "speakerid": 2,
+          "speaker": "cool_chris",
+          "contact_info": {
+            "email": "schmitzzzz@aol.com",
+            "github": "github.com/chris22"
+          }
+        }
+      ],
+      "tags": [
+        {
+          "tagid": 4,
+          "tag": "Vue"
+        },
+        {
+          "tagid": 5,
+          "tag": "Vue.js"
+        },
+        {
+          "tagid": 6,
+          "tag": "JavaScript"
+        },
+        {
+          "tagid": 7,
+          "tag": "Front-End"
+        },
+        {
+          "tagid": 24,
+          "tag": "JS Frameworks"
+        },
+        {
+          "tagid": 25,
+          "tag": "Vuex"
+        }
+      ]
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

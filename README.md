@@ -4,7 +4,11 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Development server
 
-Run `ng serve` for a development server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `ng serve --aot --sourcemap` for a development server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+## Mock server
+
+Run `npm run mock` to start the json-server API mock. Navigate to `http://localhost:3000` to view available routes and create snapshots.
 
 ## Code scaffolding
 

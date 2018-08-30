@@ -1,0 +1,6 @@
+{
+  "watch": true,
+  "routes": "mock/routes.json",
+  "port": 3000,
+  "snapshots": "mock/snapshot"
+}

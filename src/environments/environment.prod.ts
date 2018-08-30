@@ -1,3 +1,7 @@
 export const environment = {
-  production: true
+  production: true,
+  api: {
+    url: "https://api.fullstackers.io",
+    version: "v0"
+  }
 };

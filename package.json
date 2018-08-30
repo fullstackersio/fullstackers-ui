@@ -9,7 +9,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "mock": "node_modules/.bin/json-server --routes mock/routes.json --watch mock/db.json"
+    "mock": "node_modules/.bin/json-server --config mock/json-server.json mock/db.json"
   },
   "private": true,
   "dependencies": {

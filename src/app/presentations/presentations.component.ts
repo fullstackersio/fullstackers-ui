@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core"
+import { PresentationsService } from "../services/presentations.service";
 
 @Component({
   selector: "fsio-presentations",
@@ -6,18 +7,29 @@ import { Component, OnInit } from "@angular/core"
   styleUrls: ["./presentations.component.scss"]
 })
 export class PresentationsComponent implements OnInit {
-  presentations = [
-    {
-      title: "Test 1",
-      subtitle: "Testing the stuffs"
-    },
-    {
-      title: "Test 2",
-      subtitle: "Testing the stuffs again"
-    }
-  ]
+  // presentations = [
+  //   {
+  //     title: "Test 1",
+  //     subtitle: "Testing the stuffs"
+  //   },
+  //   {
+  //     title: "Test 2",
+  //     subtitle: "Testing the stuffs again"
+  //   }
+  // ]
 
-  constructor() {}
+  presentations: any;
 
-  ngOnInit() {}
+  constructor(
+    private presentationService: PresentationsService
+  ) {}
+
+  ngOnInit() {
+    this.presentationService
+      .get()
+      .subscribe(res => {
+        this.presentations = res;
+        console.log(this.presentations);
+      });
+  }
 }

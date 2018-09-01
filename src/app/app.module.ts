@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
@@ -19,16 +19,22 @@ import {
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { PresentationsComponent } from './presentations/presentations.component';
 import { PresentationComponent } from './presentation/presentation.component';
+import { PresentationsService } from './services/presentations.service';
+import { AboutComponent } from './about/about.component';
+import { UpcomingEventsComponent } from './upcoming-events/upcoming-events.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     PresentationsComponent,
-    PresentationComponent
+    PresentationComponent,
+    AboutComponent,
+    UpcomingEventsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     MatButtonModule,
     MatFormFieldModule,
     MatMenuModule,
@@ -39,7 +45,9 @@ import { PresentationComponent } from './presentation/presentation.component';
     MatToolbarModule,
     AngularFontAwesomeModule
   ],
-  providers: [],
+  providers: [
+    PresentationsService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

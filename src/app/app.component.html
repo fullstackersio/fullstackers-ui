@@ -1,5 +1,5 @@
 <header class="logo-bar">
-  <img class="logo" src="assets/img/logo.svg" alt="Fullstackers.io">
+  <a [routerLink]="['/']"><img class="logo" src="assets/img/logo.svg" alt="Fullstackers.io"></a>
 </header>
 
 <nav>
@@ -11,8 +11,9 @@
       <mat-icon>home</mat-icon>
     </a>
     <a mat-button [routerLink]="['/presentations']">Presentations</a>
-    <a mat-button [routerLink]="['/presenter-tips']">Presenter Tips</a>
     <a mat-button [routerLink]="['/meetings']">Meetings</a>
+    <a mat-button [routerLink]="['/resources']">Resources</a>
+    <a mat-button [routerLink]="['/presenter-tips']">Presenter Tips</a>
     <span class="flex-fill"></span>
     <a mat-button href="https://github.com/fullstackersio" target="_blank">
       <fa name="github" size="lg"></fa>

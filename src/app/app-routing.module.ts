@@ -18,6 +18,10 @@ const routes: Routes = [
     path: 'meetings',
     loadChildren: './meetings/meetings.module#MeetingsModule'
   },
+  {
+    path: 'resources',
+    loadChildren: './resources/resources.module#ResourcesModule'
+  }
 ];
 
 @NgModule({

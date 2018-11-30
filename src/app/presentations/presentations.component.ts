@@ -1,10 +1,13 @@
-import { Component, OnInit } from "@angular/core"
-import { PresentationsService } from "../services/presentations.service";
+import { Component, OnInit } from '@angular/core';
+import { PresentationsService } from '../shared/services/presentations.service';
 
 @Component({
-  selector: "fsio-presentations",
-  templateUrl: "./presentations.component.html",
-  styleUrls: ["./presentations.component.scss"]
+  selector: 'fsio-presentations',
+  templateUrl: './presentations.component.html',
+  styleUrls: ['./presentations.component.scss'],
+  providers: [
+    PresentationsService
+  ]
 })
 export class PresentationsComponent implements OnInit {
   // presentations = [

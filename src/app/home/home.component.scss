@@ -1,0 +1,18 @@
+.container {
+  display: grid;
+  grid-template-columns: 59.2vw 38.5vw;
+  grid-template-rows: auto auto;
+  grid-gap: 1vw;
+}
+
+#main-content {
+  grid-column: 1 / span 2;
+}
+
+#recent-presentations {
+
+}
+
+#upcoming-meetings {
+
+}

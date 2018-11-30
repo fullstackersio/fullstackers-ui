@@ -1,73 +1,32 @@
-<div class="logo-bar">
-  <img class="logo" src="assets/img/logo.svg" alt="Fullstackers.io">
-</div>
+<header class="logo-bar">
+  <a [routerLink]="['/']"><img class="logo" src="assets/img/logo.svg" alt="Fullstackers.io"></a>
+</header>
 
-<mat-toolbar>
-  <div class="menu-left">
-    <button mat-button>
-      <mat-icon>menu</mat-icon>
-    </button>
-    <button mat-button>
+<nav>
+  <mat-toolbar id="top-nav">
+    <!--<button mat-button>-->
+      <!--<mat-icon>menu</mat-icon>-->
+    <!--</button>-->
+    <a [routerLink]="['/']" mat-button>
       <mat-icon>home</mat-icon>
-    </button>
-    <button mat-button>Presentations</button>
-    <button mat-button>Presentation Tips</button>
-    <button mat-button>Meetings</button>
-  </div>
-  
-  <div class="menu-right">
-    <a href = "https://github.com/fullstackersio" target="_blank" mat-button><fa name="github" size="lg"></fa>
     </a>
-    <button mat-button>
-      <fa name="meetup" size="lg"></fa>
-    </button>
-    <button mat-button>
+    <a mat-button [routerLink]="['/presentations']">Presentations</a>
+    <a mat-button [routerLink]="['/meetings']">Meetings</a>
+    <a mat-button [routerLink]="['/resources']">Resources</a>
+    <a mat-button [routerLink]="['/presenter-tips']">Presenter Tips</a>
+    <span class="flex-fill"></span>
+    <a mat-button href="https://github.com/fullstackersio" target="_blank">
+      <fa name="github" size="lg"></fa>
+    </a>
+    <a mat-button href="https://stl-tech.slack.com/" target="_blank">
       <fa name="slack" size="lg"></fa>
-    </button>
-    <button mat-button>
-      <fa name="trello" size="lg"></fa>
-    </button>
+    </a>
     <button mat-button>
       <mat-icon>search</mat-icon>
     </button>
-  </div>
+  </mat-toolbar>
+</nav>
 
-</mat-toolbar>
-
-<div>
-  <p>Learning how to create full-stack, scalable internet applications, from the database all the way to front-end user interfaces.</p>
-</div>
-
-<div>
-  <div class="presentation-wrapper">
-    <h2 class="left-title">Presentations</h2>
-
-    <fsio-presentations></fsio-presentations>
-
-  </div>
-  <div class="upcoming-events-wrapper">
-    <h2 class="right-title">Upcoming Events</h2>
-    <mat-card>Meetup @ 7pm
-      <br>
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-    </mat-card>
-    <mat-card>Meetup @ 7pm
-        <br>
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-    </mat-card>
-    <mat-card>Meetup @ 7pm
-        <br>
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-    </mat-card>
-    <mat-card>Meetup @ 7pm
-        <br>
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-    </mat-card>
-    <mat-card>Meetup @ 7pm
-        <br>
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-    </mat-card>
-  </div>
-</div>
-
-<router-outlet></router-outlet>
+<section id="main">
+  <router-outlet></router-outlet>
+</section>

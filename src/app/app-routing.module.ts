@@ -1,13 +1,28 @@
-import { NgModule } from "@angular/core"
-import { Routes, RouterModule } from "@angular/router"
-import { PresentationsComponent } from "./presentations/presentations.component"
+import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: "presentations",
-    component: PresentationsComponent
+    path: '',
+    loadChildren: './home/home.module#HomeModule'
+  },
+  {
+    path: 'presentations',
+    loadChildren: './presentations/presentations.module#PresentationsModule'
+  },
+  {
+    path: 'presenter-tips',
+    loadChildren: './presenter-tips/presenter-tips.module#PresenterTipsModule'
+  },
+  {
+    path: 'meetings',
+    loadChildren: './meetings/meetings.module#MeetingsModule'
+  },
+  {
+    path: 'resources',
+    loadChildren: './resources/resources.module#ResourcesModule'
   }
-]
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

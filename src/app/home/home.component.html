@@ -4,8 +4,11 @@
   </section>
   <section id="recent-presentations">
     <!-- This should be a for loop of presentation preview components -->
-    <ng-container>
-      <fsio-presentation-preview></fsio-presentation-preview>
+    <ng-container *ngIf="presentations$ | async as results">
+      <fsio-presentation-preview *ngFor="let presentation of results;" [presentation]="presentation"></fsio-presentation-preview>
+      <ng-template #loading>
+        <div>Loading... Please wait!</div>
+      </ng-template>
     </ng-container>
   </section>
   <section id="upcoming-meetings">

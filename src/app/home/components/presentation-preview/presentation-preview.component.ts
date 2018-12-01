@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import {DomSanitizer, SafeResourceUrl} from '@angular/platform-browser';
 
 @Component({
   selector: 'fsio-presentation-preview',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PresentationPreviewComponent implements OnInit {
 
-  constructor() { }
+  // TODO: Create a Presentation interface or model
+  @Input() presentation: any;
+
+  url: SafeResourceUrl;
+
+  constructor(
+    private sanitizer: DomSanitizer
+  ) {}
 
   ngOnInit() {
+    console.log(this.presentation);
+    this.url = this.sanitizer.bypassSecurityTrustResourceUrl(`https://www.youtube.com/embed/${this.presentation.url}`);
   }
-
 }

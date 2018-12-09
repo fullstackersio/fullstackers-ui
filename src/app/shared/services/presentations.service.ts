@@ -23,6 +23,32 @@ export class PresentationsService {
   latest(): Observable<object[]> {
     return this.get()
       .map(presentations => {
+        const groups = {};
+
+        for (const presentation of presentations) {
+          const groupId = presentation['group']['groupid'];
+          if (groups.hasOwnProperty(groupId) && Array.isArray(groups[groupId])) {
+            groups[groupId].push(presentation);
+          } else {
+            groups[groupId] = [presentation];
+          }
+        }
+
+        for (const group in groups) {
+          if (group) {
+            const groupValue = groups[group];
+            if (Array.isArray(groupValue)) {
+              groupValue.sort(function (a, b) {
+                const aCreated = new Date(a['date_created']).valueOf();
+                const bCreated = new Date(b['date_created']).valueOf();
+                console.log(aCreated, bCreated, aCreated > bCreated);
+                return aCreated > bCreated ? 1 : 0;
+              });
+            }
+            console.log(groupValue);
+          }
+        }
+
         return presentations.slice(-2);
       });
   }

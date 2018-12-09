@@ -3,18 +3,13 @@
     <fsio-main-content></fsio-main-content>
   </section>
   <section id="recent-presentations">
-    <!-- This should be a for loop of presentation preview components -->
-    <ng-container *ngIf="presentations$ | async as results">
-      <fsio-presentation-preview *ngFor="let presentation of results;" [presentation]="presentation"></fsio-presentation-preview>
-      <ng-template #loading>
-        <div>Loading... Please wait!</div>
-      </ng-template>
+    <ng-container *ngIf="presentations$ | async as presentations">
+      <fsio-presentation-preview *ngFor="let presentation of presentations;" [presentation]="presentation"></fsio-presentation-preview>
     </ng-container>
   </section>
   <section id="upcoming-meetings">
-    <!-- This should be a for loop of upcoming meeting components -->
-    <ng-container>
-      <fsio-upcoming-meeting></fsio-upcoming-meeting>
+    <ng-container *ngIf="events$ | async as events">
+      <fsio-upcoming-meeting *ngFor="let event of events" [upcomingEvent]="event"></fsio-upcoming-meeting>
     </ng-container>
   </section>
 </div>

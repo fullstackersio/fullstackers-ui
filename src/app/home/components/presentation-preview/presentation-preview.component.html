@@ -1,12 +1,28 @@
-<div>
-  <!--<pre>-->
-    <!--{{ presentation | json }}-->
-  <!--</pre>-->
-  <iframe
-    width="560"
-    height="315"
-    [src]="url"
-    frameborder="0"
-    allowfullscreen
-  ></iframe>
+<div class="presentation-preview">
+  <div class="presentation">
+    <div class="videoWrapper">
+      <iframe
+        [src]="url"
+        frameborder="0"
+        allowfullscreen
+      ></iframe>
+    </div>
+  </div>
+  <div class="info">
+    <div class="header">
+      <div class="title">
+        <b>{{ presentation.title }}</b>
+      </div>
+      <div class="happened">
+        <em>{{ happened() }}</em>
+      </div>
+    </div>
+    <div class="summary">
+      {{ presentation.summary }}
+    </div>
+    <div class="meetup">
+      {{ presentation.group.name}}
+    </div>
+    <!--<pre>{{ presentation | json }}</pre>-->
+  </div>
 </div>

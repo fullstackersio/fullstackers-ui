@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'fsio-upcoming-meeting',
@@ -7,9 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UpcomingMeetingComponent implements OnInit {
 
-  constructor() { }
+  @Input() upcomingEvent: any;
 
-  ngOnInit() {
-  }
+  constructor() {}
+
+  ngOnInit() {}
 
 }

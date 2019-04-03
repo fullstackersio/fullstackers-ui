@@ -9,12 +9,8 @@ export class MeetupService {
     private http: HttpClient
   ) {}
 
-  upcomingEvents(groupUrl?: string): Observable<any> {
-    let url = 'https://api.meetup.com/2/events';
-
-    if (groupUrl) {
-      url += `?group_id=${groupUrl}`;
-    }
+  upcomingEvents(groupUrl: string): Observable<any> {
+    const url = `https://api.fullstackers.io/v0/meetup/${groupUrl}`;
 
     return this.http
       .get(url)
@@ -23,20 +19,23 @@ export class MeetupService {
       });
   }
 
-  upcomingEventsByGroupId(groupId: number | number[]): Observable<any> {
-    let url = 'https://api.meetup.com/2/events?group_id=';
+  upcomingEventsByGroupId(groupId?: number | number[]): Observable<any> {
+    let url = 'https://api.fullstackers.io/v0/meetup-events-by-id';
 
-    if (Array.isArray(groupId)) {
-      const idString = groupId.join(',');
-      url += `${idString}`;
-    } else {
-      url += groupId;
+    if (groupId !== undefined) {
+      if (Array.isArray(groupId)) {
+        const idString = groupId.join(',');
+        url += `${idString}`;
+      } else {
+        url += groupId;
+      }
     }
 
     return this.http
       .get(url)
       .map(response => {
-        return response;
+        // console.log(response['results']);
+        return response['results'];
       });
   }
 }

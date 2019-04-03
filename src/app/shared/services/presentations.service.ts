@@ -14,7 +14,7 @@ export class PresentationsService {
 
   get(): Observable<object[]> {
     return this.http
-      .get(`${env.api.url}/${env.api.version}/presentations?latest`)
+      .get(`${env.api.url}/v0/presentations?latest`)
       .map(response => {
         return response['presentations'];
       });
@@ -41,14 +41,14 @@ export class PresentationsService {
               groupValue.sort(function (a, b) {
                 const aCreated = new Date(a['date_created']).valueOf();
                 const bCreated = new Date(b['date_created']).valueOf();
-                console.log(aCreated, bCreated, aCreated > bCreated);
+                // console.log(aCreated, bCreated, aCreated > bCreated);
                 return aCreated > bCreated ? 1 : 0;
               });
             }
-            console.log(groupValue);
           }
         }
 
+        console.log(presentations);
         return presentations.slice(-2);
       });
   }

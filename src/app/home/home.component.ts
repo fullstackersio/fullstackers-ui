@@ -25,7 +25,7 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     this.presentations$ = this.presentationsService.latest();
     // Full Stackers: 18261924    jSTL: 22729531
-    this.events$ = this.meetup.upcomingEventsByGroupId([18261924, 22729531]);
+    this.events$ = this.meetup.upcomingEventsByGroupId();
   }
 
 }

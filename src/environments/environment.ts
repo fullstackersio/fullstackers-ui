@@ -6,7 +6,6 @@
 export const environment = {
   production: false,
   api: {
-    url: 'https://api.fullstackers.io',
-    version: 'v0'
+    url: 'https://api.fullstackers.io'
   }
 };

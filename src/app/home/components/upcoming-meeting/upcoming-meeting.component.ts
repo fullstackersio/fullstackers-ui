@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+
+import * as moment from 'moment';
 
 @Component({
   selector: 'fsio-upcoming-meeting',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UpcomingMeetingComponent implements OnInit {
 
-  constructor() { }
+  @Input() upcomingEvent: any;
 
-  ngOnInit() {
+  constructor() {}
+
+  ngOnInit() {}
+
+  formatTime() {
+    return moment.unix(this.upcomingEvent.time).format('YYYY');
   }
 
 }

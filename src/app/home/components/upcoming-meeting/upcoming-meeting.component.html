@@ -1,1 +1,12 @@
-upcoming-meeting works!
+<div class="upcoming-event">
+  <b><a href="{{ upcomingEvent.event_url }}">{{ upcomingEvent.name }}</a></b>
+  <p>
+    {{ formatTime() }}
+  </p>
+  <p>
+
+  </p>
+</div>
+<pre>
+  {{ upcomingEvent | json }}
+</pre>
